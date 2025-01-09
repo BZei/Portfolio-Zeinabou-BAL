@@ -1,0 +1,185 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    content: "→";
+    font-size: 14px;
+    position: absolute;
+    right: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  nav ul li a:hover::after {
+    opacity: 1;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  
+  .intro {
+    max-width: 60%;
+  }
+  
+  .intro h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .intro h1 span {
+    color: #555;
+  }
+  
+  .intro p {
+    margin: 20px 0 0;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .projects {
+    max-width: 45%;
+    margin-right: 40px;
+  }
+  
+  .projects h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .project-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .project-list > li {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .project-list > li > a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-list > li:hover > a {
+    color: #000000;
+    border-color: #000000;
+  }
+  
+  .sub-list {
+    list-style: none;
+    display: none;
+    padding-left: 20px;
+  }
+  
+  .sub-list li {
+    margin: 5px 0;
+  }
+  
+  .sub-list li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .sub-list li a:hover {
+    color: #007BFF;
+  }
+  
+  /* Pop-up A propos de moi */
+  .about-me-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .popup-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .popup-image img {
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .popup-body p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  .close-btn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+  }
+
