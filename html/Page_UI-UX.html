@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="../css/Page_UI-UX.css">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="../html/index.html"><div><img src="../img/Logo-portfolio.png" alt="logo" class="logo-port"></div></a>
+    <nav>
+      <ul>
+        <li><a href="#" id="about-me-btn">A propos de moi</a></li>
+        <li><a href="../html/index.html">Projets</a></li>
+        <li><a href="../pdf/CV2_stage - BAL.pdf" download="CV_Stage - BAL.pdf">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1><img src="../img/titreux-ui_img.png" alt="titreUX-UI_img" class="titreUX-UI_img"></h1>
+
+<div class="container">
+    <div class="phraseaccr4"> 
+      L'UX/UI design est un domaine qui m'était assez inconnu avant de commencer ma formation. Cependant, en apprenant les bases de l'expérience utilisateur (UX) et de l'interface utilisateur (UI), j'ai compris l'importance cruciale de ces éléments dans la création de sites web et d'applications. L'UX/UI design ne se limite pas seulement à l’aspect esthétique, mais englobe comment l'utilisateur interagit avec un produit. Même si je débute dans ce domaine, j'ai pris conscience de l'impact que peut avoir une interface bien pensée sur l'utilisation d'un site. Vous trouverez des projets où j'ai pu appliquer ces principes, en cherchant à améliorer la navigation et l'expérience globale pour l'utilisateur.
+      <br>Cliquez pour en savoir plus.    </div> 
+
+
+    <!-- Section des images -->
+<div class="image-gallery">
+        <div class="image-item" onclick="openModal(['../img/ux-ui1.jpg', '../img/ux-ui3.jpg', '../img/UX-UI6.jpg'], 'Ces exercices pratiques de création de wireframes et de maquettes de sites web ont été essentiels pour me familiariser avec les principes de conception et les bonnes pratiques en UX/UI. En réalisant des designs interactifs et esthétiques, j\'ai pu renforcer mes compétences en conception visuelle tout en prenant en compte l\'expérience utilisateur. Ces projets ont été une étape clé dans mon apprentissage, me permettant de mieux comprendre l\'importance de l\'interface utilisateur et de l\'ergonomie. Ils m\'ont permis de développer mes capacités à créer des interfaces intuitives et adaptées aux besoins des utilisateurs, tout en continuant à améliorer mes compétences dans ce domaine.')">
+          <img src="../img/ux-ui1.jpg" alt="Image 1">
+        </div>
+        <div class="image-item" onclick="openModal(['../img/UX-UI5.jpg', '../img/UX-UI5.jpg'], 'Ces exercices pratiques m\'ont permis de me familiariser avec l\'utilisation des empathies maps et des moodboards, des outils essentiels pour mieux comprendre les besoins et attentes des clients. Durant ce projet où on était chargé de créer une agence digital, j\'ai pu utiliser les empathy maps pour définir les attentes et émotions des utilisateurs cibles, ce qui m\'a permis de concevoir des solutions plus adaptées. Les moodboards, quant à eux, ont été une véritable aide pour visualiser l\'ambiance graphique du projet et exprimer visuellement les valeurs et le style recherché par les clients. Ces outils ont joué un rôle crucial dans ma compréhension de la conception centrée utilisateur et dans l\'amélioration de mes compétences en UX/UI')">
+          <img src="../img/UX-UI4.jpg" alt="Image 2">
+        </div>
+      </div>
+</div>
+
+
+    <!-- Modale -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" class="modal-content" src="" alt="Image">
+        <div id="modal-description" class="modal-description"></div>
+        
+        <!-- Navigation entre les images -->
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+      </div>
+
+  </main>
+
+
+<!-- Fenêtre pop-up pour A propos de moi -->
+<div class="about-me-popup" id="about-me-popup">
+  <div class="popup-content">
+    <button class="close-btn" id="close-btn">×</button>
+    <div class="popup-body">
+      <div class="popup-image">
+        <!-- Ici tu peux mettre ta photo -->
+        <img src="../img/profcv_port.jpg" alt="Ma photo" width="150px">
+      </div>
+      <p class="fenep">Je m'appelle Bal Zeinabou, j'ai 19 ans et je suis actuellement en deuxième année de BUT MMI (Métiers du Multimédia et de l'Internet), parcours Développement Web et Dispositifs Interactifs.
+        <br>Cette formation pluridisciplinaire m’a permis d’acquérir des compétences variées dans des domaines tels que le développement web, l’audiovisuel et le graphisme.
+        
+        <br>Au cours de ces deux années, j’ai approfondi mes connaissances en développement web grâce à des cours, des projets concrets et un stage en entreprise. Ces expériences m’ont permis de travailler en équipe, de résoudre des problèmes complexes et d'améliorer ma rigueur professionnelle.
+        
+        <br>Passionnée par le domaine du développement web, je suis déterminée à continuer à apprendre et à relever de nouveaux défis pour évoluer dans ce secteur.
+      </p>      
+    </div>
+    <!-- Footer avec texte centré -->
+    <div class="popup-footer">Présentation</div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="footer-content">
+      <div>
+          <img src="../img/Logo-portfolio.png" alt="logo" class="logo-port">
+      </div>
+      <div class="contact-info">
+          <p>Email : <a href="mailto:zeinaoubal05@gmail.com" class="right">zeinaoubal05@gmail.com</a></p>
+          <p>Téléphone : <a href="tel:+330766629481" class="right">+33 7 66 62 94 81</a></p>
+          <p>LinkedIn : <a href="www.linkedin.com/in/zeinabou-bal-286796294" target="_blank" class="right">Mon LinkedIn</a></p>
+      </div>
+  </div>
+</footer>
+
+
+  <script src="../js/Page_UX-UI.js"></script>
+</body>
+</html>

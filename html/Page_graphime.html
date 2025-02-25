@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="../css/Page_graphisme.css">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="../html/index.html"><div><img src="../img/Logo-portfolio.png" alt="logo" class="logo-port"></div></a>
+    <nav>
+      <ul>
+        <li><a href="#" id="about-me-btn">A propos de moi</a></li>
+        <li><a href="../html/index.html">Projets</a></li>
+        <li><a href="../pdf/CV2_stage - BAL.pdf" download="CV_Stage - BAL.pdf">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1><img src="../img/titregraphisme_img.png" alt="titregraphisme_img" class="titregrpahisme_img"></h1>
+
+
+
+<div class="container">
+    <div class="phraseaccr3"> 
+      Le graphisme était un domaine que je ne connaissais pas en profondeur avant ma formation, bien que j'aie toujours eu une passion pour le dessin. J'ai découvert un tout nouvel aspect de la création visuelle en apprenant à utiliser des logiciels de design. Cette expérience m'a permis d’allier ma créativité naturelle à des outils numériques puissants. Même si au début je me suis sentie un peu perdue avec ces nouveaux outils, j'ai vite compris comment les utiliser pour exprimer mes idées de manière plus précise et professionnelle. Vous trouverez certains projets de graphisme que j'ai réalisés au cours de ma formation, où j'ai pu mettre en pratique cette nouvelle compétence. <br>Cliquez pour en savoir plus.
+    </div> 
+
+
+
+    <!-- Section des images -->
+<div class="image-gallery">
+        <div class="image-item" onclick="openModal(['../img/graphs1.jpg', '../img/graphs3.jpg'], 'J\'ai découvert Photoshop en réalisant un exercice où l\'objectif était de concevoir le design d\'une canette. Cet exercice m\'a permis d\'explorer les fonctionnalités du logiciel et de développer mes compétences en graphisme. En travaillant sur ce projet, j\'ai appris à utiliser les outils de retouche et de manipulation d\'images pour créer un design attrayant. Cette expérience a été un point de départ important pour mon apprentissage du graphisme numérique, me donnant une base solide pour aborder d\'autres projets créatifs.')">
+          <img src="../img/graphs1.jpg" alt="Image 1">
+        </div>
+        <div class="image-item" onclick="openModal(['../img/graphs2.jpg', '../img/graphs7.jpg'], 'Lors d\'un exercice où nous devions concevoir un magazine, j\'ai utilisé Illustrator pour créer les illustrations et InDesign pour la mise en page. Cette expérience m\'a permis de me familiariser avec les outils professionnels de la suite Adobe. En manipulant des éléments graphiques et en structurant le contenu de manière visuellement cohérente, j\'ai pu développer des compétences en conception de supports imprimés et numériques. Ce projet m\'a aidé à comprendre l\'importance de l\'harmonie visuelle et de la fluidité de la mise en page dans la création d\'un magazine attractif.')">
+          <img src="../img/graphs10.png" alt="Image 2">
+        </div>
+        <div class="image-item" onclick="openModal(['../img/graphs4.jpg', '../img/graphs5.jpg', '../img/graphs6.jpg'], 'Dans le cadre de mes projets de graphisme, j\'ai eu l\'occasion de créer plusieurs logos à l\'aide de la suite Adobe (Illustrator, Photoshop) ainsi que sur Canva. Ces expériences m\'ont permis d\'expérimenter différents assemblages d\'images, typographies et couleurs pour créer des visuels attractifs et cohérents. Bien que je sois encore aux bases de la création de logos, j\'ai déjà acquis une bonne compréhension des principes de design et des outils nécessaires. Je suis déterminée à perfectionner mes compétences dans ce domaine et à explorer des techniques plus avancées afin de créer des logos toujours plus créatifs et professionnels.')">
+            <img src="../img/graphs4.jpg" alt="Image 3">
+          </div>
+          <div class="image-item" onclick="openModal(['../img/graphs8.jpg', '../img/graphs9.jpg'], 'Lors d\'un mini exercice sur InDesign, j\'ai eu l\'occasion d\'explorer les fonctionnalités interactives de ce logiciel, ce qui m\'a permis d\'évaluer davantage mes compétences. Bien que l\'exercice ne soit pas très technique, il m\'a offert une belle opportunité de découvrir les outils permettant de créer des éléments interactifs, comme des boutons cliquables et des liens. J\'ai réalisé un petit quiz interactif, où chaque question était accompagnée de réponses possibles, et j\'ai pu intégrer des fonctionnalités de navigation. Cette expérience m\'a montré que, même dans un projet simple, InDesign offre de nombreuses possibilités pour rendre des documents statiques plus dynamiques et engageants. Cela a renforcé ma compréhension de l\'importance de l\'interactivité dans les projets graphiques et m\'a donné un aperçu des capacités de ce logiciel dans la création de contenu numérique.' )">
+            <img src="../img/graphs8.jpg" alt="Image 4">
+            
+        </div>
+      </div> 
+</div>
+
+
+<div class="boutonba-container">
+  <a href="../pdf/ex_graphisme - BAL.pdf" target="_blank">
+    <button class="boutonba">Cliquez pour découvrir le quizz</button>
+  </a>
+</div>
+
+    <!-- Modale -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" class="modal-content" src="" alt="Image">
+        <div id="modal-description" class="modal-description"></div>
+        
+
+
+
+        <!-- Navigation entre les images -->
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+      </div>
+
+  </main>
+
+
+<!-- Fenêtre pop-up pour A propos de moi -->
+<div class="about-me-popup" id="about-me-popup">
+  <div class="popup-content">
+    <button class="close-btn" id="close-btn">×</button>
+    <div class="popup-body">
+      <div class="popup-image">
+        <!-- Ici tu peux mettre ta photo -->
+        <img src="../img/profcv_port.jpg" alt="Ma photo" width="150px">
+      </div>
+      <p class="fenep">Je m'appelle Bal Zeinabou, j'ai 19 ans et je suis actuellement en deuxième année de BUT MMI (Métiers du Multimédia et de l'Internet), parcours Développement Web et Dispositifs Interactifs.
+        <br>Cette formation pluridisciplinaire m’a permis d’acquérir des compétences variées dans des domaines tels que le développement web, l’audiovisuel et le graphisme.
+        
+        <br>Au cours de ces deux années, j’ai approfondi mes connaissances en développement web grâce à des cours, des projets concrets et un stage en entreprise. Ces expériences m’ont permis de travailler en équipe, de résoudre des problèmes complexes et d'améliorer ma rigueur professionnelle.
+        
+        <br>Passionnée par le domaine du développement web, je suis déterminée à continuer à apprendre et à relever de nouveaux défis pour évoluer dans ce secteur.
+      </p>      
+    </div>
+    <!-- Footer avec texte centré -->
+    <div class="popup-footer">Présentation</div>
+  </div>
+</div>
+
+
+
+
+<footer>
+  <div class="footer-content">
+      <div>
+          <img src="../img/Logo-portfolio.png" alt="logo" class="logo-port">
+      </div>
+      <div class="contact-info">
+          <p>Email : <a href="mailto:zeinaoubal05@gmail.com" class="right">zeinaoubal05@gmail.com</a></p>
+          <p>Téléphone : <a href="tel:+330766629481" class="right">+33 7 66 62 94 81</a></p>
+          <p>LinkedIn : <a href="www.linkedin.com/in/zeinabou-bal-286796294" target="_blank" class="right">Mon LinkedIn</a></p>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+  <script src="../js/Page_graphisme.js"></script>
+</body>
+</html>

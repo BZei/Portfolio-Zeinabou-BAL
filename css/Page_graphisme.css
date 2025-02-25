@@ -1,0 +1,421 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-port {
+  width: auto;
+  height: 65px;
+} 
+
+* {
+font-family: 'Commissioner', sans-serif;
+}
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #604747; /* Couleur du soulignement (orange) */
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #604747; /* Changement de couleur du texte */
+  transform: scale(1.1); /* Agrandissement léger du texte */
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1); /* Animation du soulignement */
+}
+
+/* Fenêtre pop-up *****************************************************************************************************/
+/******************************************************************************************************************************/
+/* Fenêtre pop-up */
+.about-me-popup {
+display: none;
+position: fixed;
+top: 0;
+right: 0;
+width: 50%;
+height: 100%; /* Conserver la hauteur à 100% */
+background-color: white;
+box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+z-index: 1000;
+padding: 30px;
+transform: translateX(100%);
+transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Transition fluide */
+overflow-y: auto; /* Permet le défilement */
+opacity: 0; /* Rend l'ouverture fluide */
+padding-bottom: 50px; /* Marge en bas pour le footer */
+}
+
+/* Effet d'apparition fluide */
+.about-me-popup.active {
+transform: translateX(0);
+opacity: 1;
+}
+
+/* Contenu de la pop-up */
+.popup-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+height: auto;
+}
+
+/* Image bien centrée avec halo */
+.popup-image {
+display: flex;
+justify-content: center;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.popup-image img {
+border-radius: 50%;
+border: 2px solid #ddd;
+width: 120px;
+height: auto;
+object-fit: cover;
+box-shadow: 0 0 20px rgba(255, 193, 202, 0.849); /* Halo beige rosé */
+
+/* Supprimer image-rendering qui peut altérer la qualité */
+image-rendering: auto;
+
+/* Améliorer la netteté sur les écrans haute densité */
+transform: translateZ(0); /* Peut améliorer le rendu sur certains navigateurs */
+filter: contrast(1.1) saturate(1.1); /* Légère amélioration du contraste et de la saturation */
+}
+
+.popup-body {
+text-align: justify;
+max-width: 90%;
+font-size: 1.1rem;
+line-height: 1.8;
+color: #333;
+padding: 0 20px;
+overflow-y: auto; /* Permet le scroll si le texte est trop long */
+}
+
+/* Bouton de fermeture */
+.close-btn {
+position: absolute;
+top: 15px;
+right: 20px;
+background: none;
+border: none;
+font-size: 1.5rem;
+cursor: pointer;
+color: #555;
+}
+
+/* Footer */
+.popup-footer {
+text-align: center;
+font-size: 1.2rem;
+font-weight: 600;
+margin-top: 20px;
+color: #555;
+}
+
+.fenep {
+margin: 20px;
+font-size: 1rem;
+color: #1e1a1a;
+margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+.titregrpahisme_img {
+display: block; /* Assure que l'élément prend toute la largeur possible */
+width: 280px;
+height: auto;
+margin: 0 auto; /* Centre horizontalement */
+margin-top: 50px;
+margin-bottom: 70px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 20px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.phraseaccr3 {
+  font-size: 15px;
+  text-align: center;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+/* Galerie d'images */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  flex-wrap: nowrap; /* Empêche le retour à la ligne */
+}
+
+.image-item {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-item img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  border: 1.2px solid black; /* Bordure noire */
+  box-shadow: 0 0 6px 1.5px rgba(239, 230, 167, 0.482);
+}
+
+.image-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Container du bouton */
+.boutonba-container {
+  display: flex;
+  justify-content: center;  /* Centre horizontalement */
+  align-items: center;      /* Centre verticalement */
+  margin-top: 50px;
+}
+
+/* Bouton */
+.boutonba {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #deabab;
+  border: 2.7px solid #000;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+/* Effet de survol */
+.boutonba:hover {
+  background-color: rgb(247, 214, 219);
+  transform: scale(1.1);
+}
+
+/* Effet au clic */
+.boutonba:active {
+  background-color: #deabab;
+  transform: scale(1.15);
+}
+
+
+ 
+  
+
+
+
+
+
+  
+
+  /* Styles pour la modale */
+  .modal {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  .modal-description {
+    color: #fff;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 15px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  footer {
+    padding: 20px 0;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Style du texte des infos de contact */
+.contact-info {
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;  /* Réduit l'espace entre les lignes */
+  margin: 0; /* Supprime toute marge inutile */
+}
+
+/* Espacement réduit entre chaque lien */
+.contact-info p {
+  margin: 5px 0; /* Réduit l'espace vertical entre chaque ligne */
+}
+
+/* Liens du footer */
+.right {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.right::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #865c5c;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.right:hover {
+    color: #865c5c;
+    transform: scale(1.05);
+}
+
+.right:hover::after {
+    transform: scaleX(1);
+}
